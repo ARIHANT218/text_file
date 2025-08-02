@@ -7,3 +7,11 @@ Type of polymorphism :
 Compile time polymorphism --Occur when the method to be executed is determined at compile time. ususallly operator overloading ..
 run time ploy -- Occurs when the method to be executed is determined at run time ploy .
 
+Inheritance : It is the concept of oops . When derive class access the property and charac  of the parent class is known as inheritance.
+ In java Multiple inheritance is not possible . Using interface can be implement multpile inheritance . 
+
+Interafce is just like a class , which contains the abstract methods and variables . 
+
+
+
+
