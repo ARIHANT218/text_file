@@ -1,0 +1,9 @@
+OOPS --
+
+
+1. Polymorphism  : It is the concept of oops. Polymorphism is the ability of a single function and methos or operator behave differently based of the input .
+Type of polymorphism :
+1. Compile time ploy  2. run time ploy
+Compile time polymorphism --Occur when the method to be executed is determined at compile time. ususallly operator overloading ..
+run time ploy -- Occurs when the method to be executed is determined at run time ploy .
+
