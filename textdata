@@ -1,7 +1,8 @@
 OOPS --
 
 
-1. Polymorphism  : It is the concept of oops. Polymorphism is the ability of a single function and methos or operator behave differently based of the input .
+1. Polymorphism  : It is the concept of oops. Polymorphism is the ability of a single function and methos or operator behave differently
+based of the input .
 Type of polymorphism :
 1. Compile time ploy  2. run time ploy
 Compile time polymorphism --Occur when the method to be executed is determined at compile time. ususallly operator overloading ..
@@ -11,6 +12,17 @@ Inheritance : It is the concept of oops . When derive class access the property 
  In java Multiple inheritance is not possible . Using interface can be implement multpile inheritance . 
 
 Interafce is just like a class , which contains the abstract methods and variables . 
+
+Encapsulation : it is the concept of oops .  Encapsulation  wrapped the method and variables into the single unit . AND ALSO HIDING THE DATA FROM USER
+ . BY DECLARE  THE CLASS WRAAPED  THE METHOS AND VARIABLES AND USING MODIFIER LIKE PRIVATE AND PROTECT 
+EASLY HIDE THE DATA FROM USER .
+
+
+Abstraction in Java : IT HIDING THE INTERNAL IMPLEMENTATION DETAILS AND SHOWONLY ESSENTIAL DETILS TO THE USER.
+IN JAVA TWO WAYS ARE POSSIBLE ...
+1. INTERFACE  2.  ABSTRACT CLASSES.  ... RFEAL LIFE EXAMPLE IS TV AND BUTTON.
+
+
 
 
 
