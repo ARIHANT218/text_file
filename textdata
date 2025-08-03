@@ -1,5 +1,5 @@
 OOPS --
-
+1....
 
 1. Polymorphism  : It is the concept of oops. Polymorphism is the ability of a single function and methos or operator behave differently
 based of the input .
@@ -22,8 +22,8 @@ Abstraction in Java : IT HIDING THE INTERNAL IMPLEMENTATION DETAILS AND SHOWONLY
 IN JAVA TWO WAYS ARE POSSIBLE ...
 1. INTERFACE  2.  ABSTRACT CLASSES.  ... RFEAL LIFE EXAMPLE IS TV AND BUTTON
 
-
-
+----
+2...
 What is computer network? 
 COMPUETR NETWORK IS THE SYSTEM WHERE TWO OR MORE  COMPUTERS AND DEVICES ARE CONNECTED TO  SHARE  DATA , RESOUCES , AND COMMUNICATE.
 These devices communicate using wired (Ethernet cables) or wireless (Wi-Fi, Bluetooth) connections.
@@ -34,6 +34,25 @@ LAN (Local Area Network) – Connects devices within a limited area (e.g., home,
 WAN (Wide Area Network) – Covers large geographical areas (e.g., the internet).
 MAN (Metropolitan Area Network) – Connects multiple LANs within a city.
 PAN (Personal Area Network) – A small network for personal devices (e.g., Bluetooth).
+
+ ----
+3...
+
+What is an IP Address?
+IP adddress or Internet Protocols address is unique identifier which is assign to each devices connected to the network.
+
+there are two version of IP add.
+- IPv4 -- 32 bit  , IPV6  -- 128 bit 
+
+
+4...
+What is a VPN?
+Virtual Private Network is create a secure connection over a network bew the your device and another deviceornetwork .
+it encurpts the data so that unorthised user is not directly access the information.
+
+
+
+
 
 
 
