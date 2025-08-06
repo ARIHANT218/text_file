@@ -79,8 +79,36 @@ class Solution {
         return unplaced;
     }
 }
+-----
 
+✅ Problem Statement Summary
+Rules:
 
+Each fruit must be placed in the leftmost basket that can fit it.
+
+Once a basket is used, it cannot be reused.
+
+If a fruit can't be placed in any basket, it is unplaced.
+code: 
+
+int n = fruits.length;
+boolean[] used = new boolean[n]; 
+
+int unplaced = 0;
+
+for (int i = 0; i < n; i++) {
+    boolean placed = false;
+    for (int j = 0; j < n; j++) {
+        if (!used[j] && baskets[j] >= fruits[i]) {
+            used[j] = true;
+            placed = true;
+            break;
+        }
+  if (!placed) {
+      unplaced++;
+  }
+
+ return unplaced;
 
 
 
