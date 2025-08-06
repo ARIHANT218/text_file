@@ -52,6 +52,9 @@ it encurpts the data so that unorthised user is not directly access the informat
 
 -----
 
+Structure...
+DNS .. DOMAIN NAME SYSTEM... USED FOR FIND THE IP address of Server.. Basically Browse jse the dns request to finding the server ip address and then send a request to server
+
 
 class Solution {
     public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
