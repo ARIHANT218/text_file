@@ -55,6 +55,10 @@ it encurpts the data so that unorthised user is not directly access the informat
 Structure...
 DNS .. DOMAIN NAME SYSTEM... USED FOR FIND THE IP address of Server.. Basically Browse jse the dns request to finding the server ip address and then send a request to server
 
+--
+Router -- it connect the multiple networks with each oher.. and it store the IP address .
+Switvh -- Connect the multiple devices together in a network and also store the MAC address  , itshare the data for particular devices .
+HUB - connect device with network and not store  MAC or IP . i t send data to all devices.
 
 class Solution {
     public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
