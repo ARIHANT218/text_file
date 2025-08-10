@@ -281,3 +281,27 @@ class Solution {
 }
 
 
+-----
+869. Reordered Power of 2
+
+class Solution {
+    private static final Set<String> powerSet = new HashSet<>();
+    
+    static {
+        for (int i = 0; i < 31; i++) {
+            int power = 1 << i; // 2^i
+            char[] digits = String.valueOf(power).toCharArray();
+            Arrays.sort(digits);
+            powerSet.add(new String(digits));
+        }
+    }
+    
+    public boolean reorderedPowerOf2(int n) {
+        char[] digits = String.valueOf(n).toCharArray();
+        Arrays.sort(digits);
+        return powerSet.contains(new String(digits));
+    }
+}
+
+
+
