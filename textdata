@@ -83,7 +83,7 @@ class Solution {
         return unplaced;
     }
 }
------
+-----------------------------------------------------------------------------------------------------------------
 
 ✅ Problem Statement Summary
 Rules:
@@ -182,7 +182,7 @@ Got it — you’re asking about **LeetCode 808: Soup Servings**.
 This is a probability + dynamic programming problem where we simulate all serving possibilities recursively, storing results in a memo table for efficiency.
 
 ---
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Approach**
 
 1. **Convert mL to “serving units” of 25 mL**
@@ -218,7 +218,7 @@ This is a probability + dynamic programming problem where we simulate all servin
 
    * For large starting values (`n > 4800` in mL), the probability approaches `1.0` and we can directly return `1.0` to avoid TLE.
 
----
+---------------------------------------------------------------------------------------------------------------
 
 ## **Java Code**
 
@@ -256,7 +256,7 @@ class Solution {
 }
 ```
 
----
+---------------------------------------------------------------------------------------------------------------
 
 ## **Complexity**
 
@@ -280,8 +280,8 @@ class Solution {
     }
 }
 
-
------
+------------------------------------------------------------------------------------------------------------
+--------------------
 869. Reordered Power of 2
 
 class Solution {
@@ -300,6 +300,45 @@ class Solution {
         char[] digits = String.valueOf(n).toCharArray();
         Arrays.sort(digits);
         return powerSet.contains(new String(digits));
+    }
+
+
+------------------------------------------------------------------------------------------------------------
+2438. Range Product Queries of Powers
+import java.util.*;
+
+class Solution {
+    public int[] productQueries(int n, int[][] queries) {
+        List<Integer> powerList = new ArrayList<>();
+        long M = 1_000_000_007;
+
+        // Get all powers of 2 from n
+        for (int i = 0; i < 32; i++) {
+            if ((n & (1 << i)) != 0) {
+                powerList.add(1 << i);
+            }
+        }
+
+        List<Integer> ans = new ArrayList<>();
+
+        // Process each query
+        for (int i = 0; i < queries.length; i++) {
+            int start = queries[i][0];
+            int end = queries[i][1];
+            long product = 1;
+
+            for (int j = start; j <= end; j++) {
+                product = (product * powerList.get(j)) % M;
+            }
+            ans.add((int) product);
+        }
+
+        // Convert List<Integer> to int[]
+        int[] result = new int[ans.size()];
+        for (int i = 0; i < ans.size(); i++) {
+            result[i] = ans.get(i);
+        }
+        return result;
     }
 }
 
