@@ -347,4 +347,36 @@ class Solution {
 }
 
 
+--------------------------------------------------------------------------------------------------------------
+
+
+Ways to Express an Integer as Sum of Powers
+
+class Solution {
+    int M = 1000_000_007;
+    int solve(int n , int num , int x , int [][] dp){
+        if(n==0) return 1;
+        if(n<0) return 0;
+        int currPower = (int) Math.pow(num,x);
+
+       if (currPower > n) return 0;
+       if(dp[n][num] != -1) return dp[n][num];
+
+        int take = solve(n-currPower, num+1 ,x,dp);
+        int skip= solve(n, num+1, x,dp);
+        return dp[n][num] = (take+skip ) %M;
+
+
+
+    }
+    public int numberOfWays(int n, int x) {
+        int [][] dp = new int [301][301];
+        for (int[] row : dp) {
+            Arrays.fill(row, -1);
+        }
+        return solve(n,1,x,dp);
+
+    }
+}
+
 
