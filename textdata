@@ -405,6 +405,29 @@ class Solution {
 ------------------------------------------------------------------------------------------------------------
 
 
+class Solution {
+    public int longestValidParentheses(String s) {
+        Stack<Integer> st = new Stack<>();
+        st.push(-1);  // base index for valid substring
+        int maxLen = 0;
+
+        for(int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if(ch == '(') {
+                st.push(i);  // store index of '('
+            } else {
+                st.pop();    // try to match with previous '('
+                if(st.isEmpty()) {
+                    st.push(i); // reset base index
+                } else {
+                    maxLen = Math.max(maxLen, i - st.peek());
+                }
+            }
+        }
+        return maxLen;
+    }
+}
 
 
 
