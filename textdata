@@ -495,3 +495,34 @@ class FreqStack {
     }
 }
 
+
+_______________________________________________
+
+import java.util.*;
+
+class Solution {
+    public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
+        // Step 1: Build adjacency list (manager -> subordinates)
+        List<List<Integer>> tree = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            tree.add(new ArrayList<>());
+        }
+        for (int emp = 0; emp < n; emp++) {
+            if (manager[emp] != -1) {
+                tree.get(manager[emp]).add(emp);
+            }
+        }
+
+        // Step 2: DFS function
+        return dfs(headID, tree, informTime);
+    }
+
+    private int dfs(int emp, List<List<Integer>> tree, int[] informTime) {
+        int maxTime = 0;
+        for (int sub : tree.get(emp)) {
+            maxTime = Math.max(maxTime, dfs(sub, tree, informTime));
+        }
+        return informTime[emp] + maxTime;
+    }
+}
+
