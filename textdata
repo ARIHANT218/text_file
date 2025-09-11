@@ -5,6 +5,14 @@ TCP /IP .. TRANSMISSION CONTROL PROTOCOLS OR INTERNET PROTOCOL THAT GUARANTEES R
 Layers ..
 APPLICATION LAYER , TRANSPORT LAYER, INTERNET LAYER, NETWORK INTERFACE LAYER 
 
+SYATEM CALL ... when user send a request to the kernel for operation like file management and memory management.
+kernel ... IT is a core part of OS .IS IS USED FOR RESOURCES MANAGEMENT AND HARDWARE, SOFTWARE COMMUNICATION AND ALSO MAN
+AGE LOW LEVEL TASK LIKE MEMORY MANAGEMENT, SCHEDULING ETC ..
+
+
+
+
+
 1. Polymorphism  : It is the concept of oops. Polymorphism is the ability of a single function and methos or operator behave differently
 based of the input .
 Type of polymorphism :
@@ -63,6 +71,7 @@ DNS .. DOMAIN NAME SYSTEM... USED FOR FIND THE IP address of Server.. Basically 
 Router -- it connect the multiple networks with each oher.. and it store the IP address .
 Switvh -- Connect the multiple devices together in a network and also store the MAC address  , itshare the data for particular devices .
 HUB - connect device with network and not store  MAC or IP . i t send data to all devices.
+
 
 class Solution {
     public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
