@@ -3,6 +3,7 @@ Numpy , Pandas is a open source library of python.
 Pandas is used for manipulate and perform operation on Data.
 Numpy is used to handle the array Numpy.
 Import Pandas as py
+import Numpy as np
 
 
 
