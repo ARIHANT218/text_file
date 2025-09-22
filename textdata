@@ -545,3 +545,62 @@ class Solution {
     }
 }
 
+
+
+......................................
+
+💡 Approach (Binary Search + Greedy)
+
+This is a binary search on the answer problem.
+
+The minimum possible largest sum is max(nums) (because each element must be inside some subarray).
+
+The maximum possible largest sum is sum(nums) (if we take the whole array as one subarray).
+
+Use binary search between these two values:
+
+For a mid value, check if we can split the array into ≤ k subarrays where each subarray sum ≤ mid.
+
+If yes → try smaller values (move right boundary).
+
+If no → increase the mid (move left boundary).
+
+This way we minimize the largest sum.
+
+
+code ........
+class Solution {
+    public int splitArray(int[] nums, int k) {
+        int left = 0, right = 0;
+        for (int num : nums) {
+            left = Math.max(left, num);  // at least the largest single element
+            right += num;               // at most the total sum
+        }
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (canSplit(nums, k, mid)) {
+                right = mid; // try smaller largest sum
+            } else {
+                left = mid + 1; // need bigger largest sum
+            }
+        }
+        return left; // or right, both same here
+    }
+
+    private boolean canSplit(int[] nums, int k, int maxSum) {
+        int count = 1;  // at least one subarray
+        int currentSum = 0;
+
+        for (int num : nums) {
+            if (currentSum + num > maxSum) {
+                count++;
+                currentSum = num;
+                if (count > k) return false;
+            } else {
+                currentSum += num;
+            }
+        }
+        return true;
+    }
+}
