@@ -609,6 +609,19 @@ class Solution {
 ----------------------------------------------------------
 973. K Closest Points to Origin
 
+Approach 1: Max Heap (Priority Queue)
+
+Use a max heap of size k.
+
+Store points by their distance to origin.
+
+If heap size exceeds k, remove the farthest point.
+
+Finally, extract all points from the heap.
+
+✅ Time Complexity: O(N log K)
+✅ Space Complexity: O(K)
+
 Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).
 
 import java.util.*;
