@@ -606,3 +606,37 @@ class Solution {
         return true;
     }
 }
+----------------------------------------------------------
+
+
+import java.util.*;
+
+class Solution {
+    public int[][] kClosest(int[][] points, int k) {
+        // Max Heap: store [distance, x, y]
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>(
+            (a, b) -> b[0] - a[0] // sort by distance (max heap)
+        );
+
+        for (int[] point : points) {
+            int dist = point[0] * point[0] + point[1] * point[1];
+            maxHeap.offer(new int[]{dist, point[0], point[1]});
+
+            if (maxHeap.size() > k) {
+                maxHeap.poll(); // remove farthest point
+            }
+        }
+
+        // Build result from heap
+        int[][] result = new int[k][2];
+        for (int i = 0; i < k; i++) {
+            int[] entry = maxHeap.poll();
+            result[i][0] = entry[1]; // x
+            result[i][1] = entry[2]; // y
+        }
+        return result;
+    }
+}
+// nlogK TC   // SC K
+
+
