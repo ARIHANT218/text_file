@@ -26,7 +26,9 @@ Software Engineer
 Requirement For Software Eng
 Risk management and SE 
 Cohestion and coupling 
-
+Coupling means degree of interconnected modules
+cohestion.. degree of elements with in module work together.
+low coupling and high cohestion 
 
 
 1. Polymorphism  : It is the concept of oops. Polymorphism is the ability of a single function and methos or operator behave differently
