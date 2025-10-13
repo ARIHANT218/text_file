@@ -18,6 +18,9 @@ Import Pandas as py
 import Numpy as np
 
 import matplotlip.
+method 
+mat.plt()
+
 
 it is a open source python libraries which is used fordata manipulation and graphs.
 
