@@ -31,8 +31,73 @@ mat.plt()
 it is a open source python libraries which is used fordata manipulation and graphs.
 
 ....
+---
 
+class Solution {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
 
+        //graph..
+        //topologic sort. to dersired output...
+
+        HashMap <Integer , List<Integer>> map = new HashMap <>();
+//////graphs..
+        for(int [] edge :  prerequisites){
+            int u = edge[0]; // neigh..
+            int v = edge[1];//source..
+            map.putIfAbsent(v,new ArrayList<>());
+
+            map.get(v).add(u);
+        }
+        //bfs..
+
+        int [] indegree = new int [numCourses];
+        Arrays.fill(indegree,0);
+
+        List<Integer> ans = new ArrayList<>();
+
+        for(int v : map.keySet()){
+             for (int neighbor : map.get(v)) {
+             indegree[neighbor]++;
+    }
+        }
+
+        Queue <Integer> queue = new LinkedList<>();
+
+        for(int i = 0 ; i < indegree.length; i++){
+            if(indegree[i] == 0){
+                 queue.add(i);
+
+            }
+           
+        }
+
+        while(!queue.isEmpty()){
+            int node = queue.poll();
+            ans.add(node);
+
+           // Safely get neighbors (may be none)
+            for (int neigh : map.getOrDefault(node, Collections.emptyList())) {
+                indegree[neigh]--;
+                if (indegree[neigh] == 0) queue.add(neigh);
+            }
+        }
+
+    if (ans.size() != numCourses) {
+            return new int[0];
+        }
+    int res [] = new int [numCourses];
+    for( int i = 0 ; i<ans.size(); i++){
+        res[i] = ans.get(i);
+
+    }
+
+    
+    return res;
+
+        
+    }
+}
+----
 First Missing Positive
 
 public class Solution {
